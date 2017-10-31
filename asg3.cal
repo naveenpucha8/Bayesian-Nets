@@ -1,0 +1,33 @@
+You should be clear with the concept of marginalization and conditioning. If not, refer section 13.3 of course book.
+
+By conditioning we have,
+P(Vindhya = Yes | CF = Beverage, W = Sunny) = 
+						P(Vindhya = Yes | CF = Beverage, WW = Low) * P(WW = Low | W = Sunny) + P(Vindhya = Yes | CF = Beverage, WW = High) * P(WW = High | W = Sunny) 
+
+
+Following probability are directly given:
+P(L = Parul) = 0.15
+P(L = OBH) = 0.6
+P(L = Himalaya) = 0.25
+
+P(H = high) = 0.5
+P(H = low)  = 0.5
+
+P(W = Sunny) = 0.5
+P(T = [8:00-20:00]) = 0.5
+
+Given above probabilities and CPT's provided we can easily calculate following:
+
+P(WS = Low) = 0.5 * 0.5 * [0.8 + 0.2 + 0.9 + 0.7] = 0.65
+P(WS = High)  = 0.5 * 0.5 * [0.2 + 0.8 + 0.1 + 0.3] = 0.35
+
+P(WW = Low | W = Sunny)  = 0.75
+P(WW = High | W = Sunny) = 0.25
+
+
+P(Vindhya = Yes | CF = Beverage, WW = Low)  = 0.5 * [(0.1 * 0.15 + 0.1 * 0.6 + 0.4 * 0.25) * 0.65 + (0.2 * 0.15 + 0.2 * 0.6 + 0.9 * 0.25) * 0.35] = 0.1225
+P(Vindhya = Yes | CF = Beverage, WW = High) = 0.5 * [(0.2 * 0.15 + 0.2 * 0.6 + 0.4 * 0.25) * 0.65 + (0.3 * 0.15 + 0.3 * 0.6 + 0.9 * 0.25) * 0.35] = 0.16
+
+Therefore,
+
+P(Vindhya = Yes | CF = Beverage, W = Sunny) = 0.75 * 0.1225 + 0.25 * 0.16 = 0.131875
